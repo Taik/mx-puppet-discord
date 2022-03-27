@@ -26,6 +26,7 @@ RUN chown node:node package.json package-lock.json
 
 USER node
 
+RUN git config --global url."https://github.com/".insteadOf git://github.com/
 RUN npm install
 
 COPY tsconfig.json ./
